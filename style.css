@@ -1,0 +1,786 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;  /* Dark background */
+    color: #ffffff;  /* White text */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff4d4d; /* Red accent */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e63939;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                url('https://source.unsplash.com/1600x900/?blood,donation') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ff4d4d;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 600px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Button */
+.hero-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+}
+
+.image-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-gallery img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+}
+* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff4d4d; /* Red accent */
+}
+
+.logo span {
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e63939;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #1e1e1e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.mobile-menu a:hover {
+    color: #ff4d4d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+}
+/* Impact Section */
+.impact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+}
+
+.impact-section h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+/* Impact Container */
+.impact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Impact Box */
+.impact-box {
+    background: #252525;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.impact-box:hover {
+    transform: scale(1.05);
+}
+
+/* Icons/Images */
+.impact-box img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.impact-box h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ff4d4d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Why Donate Section */
+.why-donate {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+}
+
+.why-donate h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Donation Container */
+.donation-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Donation Box */
+.donation-box {
+    background: #252525;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.donation-box:hover {
+    transform: scale(1.05);
+}
+
+.donation-box h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.donation-box p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .donation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Heroes Section */
+.heroes-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+}
+
+.heroes-section h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Heroes Container */
+.heroes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Hero Card */
+.hero-card {
+    background: #252525;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+}
+
+.hero-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.hero-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .heroes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                url('https://source.unsplash.com/1600x900/?helping,hands') no-repeat center;
+    background-size: cover;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+}
+
+/* Find Donor Button */
+.find-donor {
+    background-color: #252525;
+    border: 2px solid #ff4d4d;
+}
+
+.find-donor:hover {
+    background-color: #ff4d4d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Footer Section */
+.footer {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Logo */
+.footer-logo h2 {
+    font-size: 2rem;
+    color: #ff4d4d;
+}
+
+.footer-logo span {
+    color: white;
+}
+
+.footer-logo p {
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Footer Links */
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Social Media Icons */
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4d4d;
+}
+
+* Footer Section */
+.footer {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Logo */
+.footer-logo h2 {
+    font-size: 2rem;
+}
+
+.red-text {
+    color: #ff4d4d;
+}
+
+.white-text {
+    color: white;
+}
+
+.footer-logo p {
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Footer Links */
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Social Media Icons */
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4d4d;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Logo */
+.footer-logo h2 {
+    font-size: 2rem;
+}
+
+.red-text {
+    color: #ff4d4d;
+}
+
+.white-text {
+    color: white;
+}
+
+.footer-logo p {
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Footer Links */
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Social Media Icons */
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4d4d;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
